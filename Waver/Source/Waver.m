@@ -60,7 +60,7 @@
     self.phaseShift = -0.25f;
     self.density = 1.f;
     
-    self.waveColor = [UIColor whiteColor];
+    _waveColor = _waveColor ? : [UIColor whiteColor];
     self.mainWaveWidth = 2.0f;
     self.decorativeWavesWidth = 1.0f;
     
@@ -99,6 +99,18 @@
         [self.waves addObject:waveline];
     }
     
+}
+
+- (void)setWaveColor:(UIColor *)waveColor {
+    if (_waveColor != waveColor) {
+        _waveColor = waveColor;
+        [self.waves enumerateObjectsUsingBlock:^(CAShapeLayer *_Nonnull obj, NSUInteger i, BOOL * _Nonnull stop) {
+            CGFloat progress = 1.0f - (CGFloat)i / self.numberOfWaves;
+            CGFloat multiplier = MIN(1.0, (progress / 3.0f * 2.0f) + (1.0f / 3.0f));
+            UIColor *color = [self.waveColor colorWithAlphaComponent:(i == 0 ? 1.0 : 1.0 * multiplier * 0.4)];
+            obj.strokeColor = color.CGColor;
+        }];
+    }
 }
 
 - (void)invokeWaveCallback

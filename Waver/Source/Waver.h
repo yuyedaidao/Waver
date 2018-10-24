@@ -38,5 +38,5 @@
 //
 
 @property (nonatomic, readonly) NSMutableArray * waves;
-- (void)prepare;
+
 @end
