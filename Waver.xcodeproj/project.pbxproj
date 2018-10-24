@@ -181,6 +181,7 @@
 				TargetAttributes = {
 					0AE3A3141A3CCEA100FD562D = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = GP4MMMES25;
 					};
 					0AE3A32D1A3CCEA100FD562D = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -357,8 +358,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GP4MMMES25;
 				INFOPLIST_FILE = Waver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iqilu.Waver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -367,8 +370,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GP4MMMES25;
 				INFOPLIST_FILE = Waver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iqilu.Waver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -426,6 +431,7 @@
 				0AE3A33A1A3CCEA100FD562D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AE3A33B1A3CCEA100FD562D /* Build configuration list for PBXNativeTarget "WaverTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +440,7 @@
 				0AE3A33D1A3CCEA100FD562D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

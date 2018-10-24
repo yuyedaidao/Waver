@@ -68,6 +68,8 @@
     self.waveWidth  = CGRectGetWidth(self.bounds);
     self.waveMid    = self.waveWidth / 2.0f;
     self.maxAmplitude = self.waveHeight - 4.0f;
+    
+    [self prepare];
 }
 
 - (void)setWaverLevelCallback:(void (^)(Waver * waver))waverLevelCallback {
@@ -77,7 +79,7 @@
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(invokeWaveCallback)];
     [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
     
-    [self prepare];
+    
 }
 
 - (void)prepare {

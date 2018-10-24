@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Waver.h"
+
 #import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
@@ -35,7 +36,7 @@
         [weakRecorder updateMeters];
         
         CGFloat normalizedValue = pow (10, [weakRecorder averagePowerForChannel:0] / 40);
-        
+        NSLog(@"%lf", normalizedValue);
         waver.level = normalizedValue;
         
     };
